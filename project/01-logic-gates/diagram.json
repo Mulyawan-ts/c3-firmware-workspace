@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "author": "User",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-c3-devkitm-1", "id": "esp32", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-pushbutton", "id": "btnA", "top": -100, "left": -120, "attrs": { "color": "red" } },
+    { "type": "wokwi-pushbutton", "id": "btnB", "top": -30, "left": -120, "attrs": { "color": "blue" } },
+    { "type": "wokwi-led", "id": "ledAND", "top": -100, "left": 150, "attrs": { "color": "green", "label": "AND" } },
+    { "type": "wokwi-led", "id": "ledOR", "top": -30, "left": 150, "attrs": { "color": "yellow", "label": "OR" } },
+    { "type": "wokwi-led", "id": "ledXOR", "top": 40, "left": 150, "attrs": { "color": "red", "label": "XOR" } }
+  ],
+  "connections": [
+    [ "esp32:GND.1", "btnA:2.1", "black", [ "v0" ] ],
+    [ "esp32:GND.1", "btnB:2.1", "black", [ "v0" ] ],
+    [ "esp32:4", "btnA:1.1", "orange", [ "h0" ] ],
+    [ "esp32:5", "btnB:1.1", "blue", [ "h0" ] ],
+    
+    [ "esp32:6", "ledAND:A", "green", [ "h0" ] ],
+    [ "esp32:7", "ledOR:A", "yellow", [ "h0" ] ],
+    [ "esp32:8", "ledXOR:A", "red", [ "h0" ] ],
+    [ "esp32:GND.2", "ledAND:C", "black", [ "v0" ] ],
+    [ "esp32:GND.2", "ledOR:C", "black", [ "v0" ] ],
+    [ "esp32:GND.2", "ledXOR:C", "black", [ "v0" ] ]
+  ]
+}
