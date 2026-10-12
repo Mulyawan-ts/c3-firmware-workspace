@@ -1,0 +1,11 @@
+{
+  "name": "01-logic-gates",
+  "version": "0.1.0",
+  "targets": {
+    "firmware": {
+      "target": "riscv32-none-elf",
+      "type": "executable",
+      "sources": [ "src/**" ]
+    }
+  }
+}
